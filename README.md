@@ -3,7 +3,7 @@ DeepSTORM v1.0.0
 Software Description:
 Deep-STORM is a single molecule localization microscopy code for training a custom fully convolutional neural network estimator and recovering super-resolution images from blinking movies. 
 More details on the method can be found in the following paper:
-"E. Nehme, L.E. Weiss, T. Michaeli, and Y. Shechtman. Deep-STORM: Super resolution single molecule microscopy by deep learning" https://arxiv.org/pdf/1801.09631.pdf
+"E. Nehme, L.E. Weiss, T. Michaeli, and Y. Shechtman. Deep-STORM: Super resolution single molecule microscopy by deep learning" https://www.osapublishing.org/optica/fulltext.cfm?uri=optica-5-4-458&id=385495
 
 Getting Started:
 These instructions will get you a copy of the project up and running on your local machine. 
