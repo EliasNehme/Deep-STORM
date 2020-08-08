@@ -7,7 +7,7 @@ This code accompanies the paper: [Deep-STORM: Super resolution single molecule m
 - [Overview](#overview)
 - [System requirements](#system-requirements)
 - [Installation instructions](#installation-instructions)
-- [Usage and demo examples](#demo-examples)
+- [Usage and demo examples](#usage-and-demo-examples)
 - [Colab notebook (Installation free!)](#colab-notebook)
 - [Citation](#citation)
 - [License](#license)
@@ -41,28 +41,8 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
     * can be downloaded at "https://www.mathworks.com/products/matlab.html"
 
 * Python environment
-    * To easily duplicate the environment for training the user is encouraged to download and install the anaconda distribution at https://www.anaconda.com/download/
-    * Open up the Anaconda prompt, and create a new conda environment named "deepstorm" using the command: "conda create -n deepstorm pip python=3.5"
-    when conda asks you to proceed type "y"
-    * Activate the newly created environment using the command: "activate deepstorm"
-	3.4  - Install Tensorflow cpu or gpu-version 1.4.0 in the deepstorm environment using the command: "pip install --ignore-installed --upgrade tensorflow" or
-	       "pip install --ignore-installed --upgrade tensorflow-gpu" depending on whether your system have a cuda capable GPU.
-	       For more information on tensorflow installation see "https://www.tensorflow.org/install/install_windows"
-	3.5  - Install Keras 2.1.3 using the command: "pip install keras"
-	3.6  - Install scipy 1.0.0 using the command: "conda install -c anaconda scipy"
-	3.7  - Install scikit-learn using the command: "conda install scikit-learn"
-	3.8  - Install scikit-image using the command: "conda install scikit-image"
-	3.9  - Install matplotlib using the command: "conda install -c conda-forge matplotlib"
-	3.10 - Install h5py using the command: "conda install -c anaconda h5py"
-	3.11 - Install argparser using the command: "pip install argparse"
-	*To verify all the above mentioned packages are installed in the new environment "deepstorm" run the command: "conda list".
-	Now the conda environment with all needed dependencies is ready for use, and the prompt can be closed using the command: "exit()".
- 
-3. The [conda](https://docs.conda.io/en/latest/) environment for this project is given in `environment_<os>.yml` where `<os>` should be substituted with your operating system. For example, to replicate the environment on a linux system use the command: `conda env create -f environment_linux.yml` from within the downloaded directory.
-This should take a couple of minutes.
-4. After activation of the environment using: `conda activate deep-storm`, you're set to go!
-
-
+    * The [conda](https://docs.conda.io/en/latest/) environment for this project is given in `environment_<os>.yml` where `<os>` should be substituted with your operating system. For example, to replicate the environment on a linux system use the command: `conda env create -f environment_linux.yml` from within the downloaded directory. This should take a couple of minutes.
+    * After activation of the environment using: `conda activate deep-storm`, you're set to go!
 
 # Usage and demo examples
 
