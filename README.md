@@ -36,12 +36,11 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
     3. Place the downloaded ".jar" file into ImageJ plugins directory
     * To verify ThunderSTORM is setup correctly, open ImageJ and navigate to the Plugins directory. The ThunderSTORM plugin should appear in the list.
 
-* Matlab
-    * can be downloaded at "https://www.mathworks.com/products/matlab.html"
+* Matlab can be downloaded at "https://www.mathworks.com/products/matlab.html"
 
 * Python environment
-    * The [conda](https://docs.conda.io/en/latest/) environment for this project is given in `environment_<os>.yml` where `<os>` should be substituted with your operating system. For example, to replicate the environment on a linux system use the command: `conda env create -f environment_linux.yml` from within the downloaded directory. This should take a couple of minutes.
-    * After activation of the environment using: `conda activate deep-storm`, you're set to go!
+    1. The [conda](https://docs.conda.io/en/latest/) environment for this project is given in `environment_<os>.yml` where `<os>` should be substituted with your operating system. For example, to replicate the environment on a linux system use the command: `conda env create -f environment_linux.yml` from within the downloaded directory. This should take a couple of minutes.
+    2. After activation of the environment using: `conda activate deep-storm`, you're set to go!
 
 # Usage and demo examples
 
