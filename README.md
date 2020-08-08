@@ -1,14 +1,14 @@
 # Deep-STORM
 
-This code accompanies the paper: ["Deep-STORM: Super resolution single molecule microscopy by deep learning"](https://www.osapublishing.org/optica/fulltext.cfm?uri=optica-5-4-458&id=385495)
+This code accompanies the paper: [Deep-STORM: Super resolution single molecule microscopy by deep learning](https://www.osapublishing.org/optica/fulltext.cfm?uri=optica-5-4-458&id=385495)
 
 # Contents
 
 - [Overview](#overview)
 - [System requirements](#system-requirements)
 - [Installation instructions](#installation-instructions)
-- [Learning a localization model](#learning-a-localization-model)
-- [Demo examples](#demo-examples)
+- [Usage and demo examples](#demo-examples)
+- [Colab notebook (Installation free!)](#colab-notebook)
 - [Citation](#citation)
 - [License](#license)
 - [Contact](#contact)
@@ -17,7 +17,7 @@ This code accompanies the paper: ["Deep-STORM: Super resolution single molecule 
 
 Deep-STORM is a single molecule localization microscopy code for training a custom fully convolutional neural network estimator and recovering super-resolution images from dense blinking movies:
 
-![](Figures/DemoExpData.gif "This movie shows representative experimental frames from the EPFL challenge website with localizations overliad as red dots (Fig. 5c main text).")
+![](Figures/DemoExpData.gif "This movie shows representative experimental frames of a microtubules experiment from the EPFL challenge website with localizations overliad as red dots (Fig. 6c main text).")
 
 # System requirements
 
@@ -29,7 +29,7 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
 * Prerequisites
     1. ImageJ >= 1.51u with ThunderSTORM plugin >= 1.3 installed.
     2. Matlab >= R2017b with image-processing toolbox.
-    3. Anaconda >= 5.1 for windows 10 (64-bit) with Tensorflow >= 1.4.0, and Keras >= 1.0.0 installed.
+    3. Python >= 3.5 environment with Tensorflow >= 1.4.0, and Keras >= 1.0.0 installed.
 
 * ImageJ and ThunderSTORM
     1. Download and install ImageJ 1.51u - The software is freely available at "https://imagej.nih.gov/ij/download.html"
@@ -37,11 +37,11 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
     3. Place the downloaded ".jar" file into ImageJ plugins directory
     * To verify ThunderSTORM is setup correctly, open ImageJ and navigate to the Plugins directory. The ThunderSTORM plugin should appear in the list.
 
-* MatlabR2017b 
+* Matlab
     * can be downloaded at "https://www.mathworks.com/products/matlab.html"
 
-* Anaconda
-    * Download and install the anaconda distribution for windows at "https://www.anaconda.com/download/"
+* Python environment
+    * To easily duplicate the environment for training the user is encouraged to download and install the anaconda distribution at https://www.anaconda.com/download/
     * Open up the Anaconda prompt, and create a new conda environment named "deepstorm" using the command: "conda create -n deepstorm pip python=3.5"
     when conda asks you to proceed type "y"
     * Activate the newly created environment using the command: "activate deepstorm"
@@ -58,17 +58,13 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
 	*To verify all the above mentioned packages are installed in the new environment "deepstorm" run the command: "conda list".
 	Now the conda environment with all needed dependencies is ready for use, and the prompt can be closed using the command: "exit()".
  
- 
- 
-1. Download this repository as a zip file (or clone it using git).
-2. Go to the downloaded directory and unzip it (or clone it using git).
 3. The [conda](https://docs.conda.io/en/latest/) environment for this project is given in `environment_<os>.yml` where `<os>` should be substituted with your operating system. For example, to replicate the environment on a linux system use the command: `conda env create -f environment_linux.yml` from within the downloaded directory.
 This should take a couple of minutes.
 4. After activation of the environment using: `conda activate deep-storm`, you're set to go!
 
 
 
-# Learning a localization model
+# Usage and demo examples
 
 * To train a network, the user needs to perform the following steps:
     1. Simulate a tiff stack of data frames, with known ground truth positions in an accompanying csv file, using ImageJ ThunderSTORM plugin. The simulated images and positions are saved for handling in Matlab.
@@ -79,11 +75,19 @@ This should take a couple of minutes.
 * To use the trained network on data for image reconstruction from a blinking movie, run the command: `python  Testing.py --datafile <path_to_tiff_stack_for_reconstruction> --weights_name <path_to_the_trained_model_weights_as_hdf5_file> --meanstd_name <path_to_the_saved_normalization_factors_as_mfile> --savename <path_for_saving_the_Superresolution_reconstruction_matfile> --upsampling_factor <desired_upsampling_factor> --debug <boolean (0/1) for saving individual predictions>`
     * Note: The inputs `upsampling_factor` and `debug` are optional. By default, the `upsampling_factor` is set to 8, and `debug` is set to 0.
  
-# Demo examples
- 
 * There are 2 different demo examples that demonstrate the use of this code:
     1. `demo1 - Simulated Microtubules` - learning a CNN for localizing simulated microtubules structures obtained from the EPFL 2013 Challenge (Fig. 4 main text). It takes approximately 2 hours to train a model from scratch on a Titan Xp. See the pdf instructions inside this folder for a detailed step by step application of the software, with snapshots and intermediate outputs.
-    2. `demo2 - Real Microtubules` - pre-trained CNN for localizing experimental microtubules (Fig. 6 main text).
+    2. `demo2 - Real Microtubules` - pre-trained CNN on simulations for localizing experimental microtubules (Fig. 6 main text).
+
+# Colab notebook (Installation free!)
+
+In case you do not have a GPU-installed workstation and/or do not have a Matlab license, we have recently (June 2020) collaborated with the [Jacquemet](https://cellmig.org/) and the [Henriques labs](https://henriqueslab.github.io/) to incorporate Deep-STORM into the [ZeroCostDL4Mic](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2) platform as a [Colab notebook](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki/Deep-STORM). Users are **encouraged** to work with the notebook version of the software as it allows 3 significant advantages over this implementation:
+    1. The user does not need to have access to a GPU-acccelerated workstation as the computation is performed freely on the cloud. 
+    2. No prior installation is required, as the packages are installed automatically in the notebook. 
+    3. Deep-STORM is extended to output *localizations* instead of directly outputting the super-resolved image. This feature is valuable for users intending to use the localizations afterwards for down stream analysis (e.g. single-particle-tracking).
+**Important Disclaimer**: When using the notebook implementation of Deep-STORM please also cite the [ZeroCostDL4Mic paper](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2).
+
+![](Figures/DemoExpData.gif "")
 
 # Citation
 
