@@ -23,13 +23,12 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
 
 * The software was tested on a *Linux* system with Ubuntu version 16.04, and a *Windows* system with Windows 10 Home.  
 * Training and evaluation were run on a standard workstation equipped with 32 GB of memory, an Intel(R) Core(TM) i7 − 8700, 3.20 GHz CPU, and a NVidia GeForce Titan Xp GPU with 12 GB of video memory.
-
-# Installation instructions
-
 * Prerequisites
     1. ImageJ >= 1.51u with ThunderSTORM plugin >= 1.3 installed.
     2. Matlab >= R2017b with image-processing toolbox.
     3. Python >= 3.5 environment with Tensorflow >= 1.4.0, and Keras >= 1.0.0 installed.
+
+# Installation instructions
 
 * ImageJ and ThunderSTORM
     1. Download and install ImageJ 1.51u - The software is freely available at "https://imagej.nih.gov/ij/download.html"
@@ -56,7 +55,7 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
     * Note: The inputs `upsampling_factor` and `debug` are optional. By default, the `upsampling_factor` is set to 8, and `debug` is set to 0.
  
 * There are 2 different demo examples that demonstrate the use of this code:
-    1. `demo1 - Simulated Microtubules` - learning a CNN for localizing simulated microtubules structures obtained from the EPFL 2013 Challenge (Fig. 4 main text). It takes approximately 2 hours to train a model from scratch on a Titan Xp. See the pdf instructions inside this folder for a detailed step by step application of the software, with snapshots and intermediate outputs.
+    1. `demo1 - Simulated Microtubules` - learning a CNN for localizing simulated microtubules structures obtained from the EPFL 2013 Challenge (Fig. 4 main text). It takes approximately 2 hours to train a model from scratch on a Titan Xp. See the [**pdf instructions**](https://github.com/EliasNehme/Deep-STORM/blob/master/demo1 - Simulated Microtubules/demo1.pdf) inside this folder for a detailed step by step application of the software, with snapshots and intermediate outputs.
     2. `demo2 - Real Microtubules` - pre-trained CNN on simulations for localizing experimental microtubules (Fig. 6 main text).
 
 # Colab notebook
