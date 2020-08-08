@@ -27,10 +27,9 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
 # Installation instructions
 
 * Prerequisites
-This software was tested on a Windows 10 64-bit operating system, with the following packages:
-    1. ImageJ 1.51u with ThunderSTORM plugin 1.3 installed.
-    2. MatlabR2017b with image-processing toolbox.
-    3. Anaconda distribution 5.1 for windows 10 (64-bit) with Tensorflow 1.4.0, and Keras 1.0.0 installed.
+    1. ImageJ >= 1.51u with ThunderSTORM plugin >= 1.3 installed.
+    2. Matlab >= R2017b with image-processing toolbox.
+    3. Anaconda >= 5.1 for windows 10 (64-bit) with Tensorflow >= 1.4.0, and Keras >= 1.0.0 installed.
 
 * ImageJ and ThunderSTORM
     1. Download and install ImageJ 1.51u - The software is freely available at "https://imagej.nih.gov/ij/download.html"
@@ -45,7 +44,7 @@ This software was tested on a Windows 10 64-bit operating system, with the follo
     * Download and install the anaconda distribution for windows at "https://www.anaconda.com/download/"
     * Open up the Anaconda prompt, and create a new conda environment named "deepstorm" using the command: "conda create -n deepstorm pip python=3.5"
     when conda asks you to proceed type "y"
-	3.3  - Activate the newly created environment using the command: "activate deepstorm"
+    * Activate the newly created environment using the command: "activate deepstorm"
 	3.4  - Install Tensorflow cpu or gpu-version 1.4.0 in the deepstorm environment using the command: "pip install --ignore-installed --upgrade tensorflow" or
 	       "pip install --ignore-installed --upgrade tensorflow-gpu" depending on whether your system have a cuda capable GPU.
 	       For more information on tensorflow installation see "https://www.tensorflow.org/install/install_windows"
@@ -71,7 +70,7 @@ This should take a couple of minutes.
 
 # Learning a localization model
 
-* The software includes Matlab and Python codes, both for training and reconstruction. For training a net, the user needs to perform the following steps:
+* To train a network, the user needs to perform the following steps:
     1. Simulate a tiff stack of data frames, with known ground truth positions in an accompanying csv file, using ImageJ ThunderSTORM plugin. The simulated images and positions are saved for handling in Matlab.
     2. Generate the training examples matfile in matlab using the script `GenerateTrainingExamples.m`.
     3. Open up the anaconda command prompt, and activate the previously created `deepstorm` environment by using the command: `activate deepstorm`.
@@ -83,7 +82,7 @@ This should take a couple of minutes.
 # Demo examples
  
 * There are 2 different demo examples that demonstrate the use of this code:
-    1. `demo1 - Simulated Microtubules` - learning a CNN for localizing simulated microtubules structures obtained from the EPFL 2013 Challenge (Fig. 4 main text). It takes approximately 2 hours to train a model from scratch on a Titan Xp. See the pdf instructions inside the folder `demo 1 - Simulated Microtubules` for a detailed step by step application of the software, with snapshots and intermediate outputs.
+    1. `demo1 - Simulated Microtubules` - learning a CNN for localizing simulated microtubules structures obtained from the EPFL 2013 Challenge (Fig. 4 main text). It takes approximately 2 hours to train a model from scratch on a Titan Xp. See the pdf instructions inside this folder for a detailed step by step application of the software, with snapshots and intermediate outputs.
     2. `demo2 - Real Microtubules` - pre-trained CNN for localizing experimental microtubules (Fig. 6 main text).
 
 # Citation
