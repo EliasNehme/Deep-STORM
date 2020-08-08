@@ -8,7 +8,7 @@ This code accompanies the paper: [Deep-STORM: Super resolution single molecule m
 - [System requirements](#system-requirements)
 - [Installation instructions](#installation-instructions)
 - [Usage and demo examples](#usage-and-demo-examples)
-- [Colab notebook (Installation free!)](#colab-notebook)
+- [Colab notebook](#colab-notebook)
 - [Citation](#citation)
 - [License](#license)
 - [Contact](#contact)
@@ -59,12 +59,13 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
     1. `demo1 - Simulated Microtubules` - learning a CNN for localizing simulated microtubules structures obtained from the EPFL 2013 Challenge (Fig. 4 main text). It takes approximately 2 hours to train a model from scratch on a Titan Xp. See the pdf instructions inside this folder for a detailed step by step application of the software, with snapshots and intermediate outputs.
     2. `demo2 - Real Microtubules` - pre-trained CNN on simulations for localizing experimental microtubules (Fig. 6 main text).
 
-# Colab notebook (Installation free!)
+# Colab notebook
 
-In case you do not have a GPU-installed workstation and/or do not have a Matlab license, we have recently (June 2020) collaborated with the [Jacquemet](https://cellmig.org/) and the [Henriques labs](https://henriqueslab.github.io/) to incorporate Deep-STORM into the [ZeroCostDL4Mic](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2) platform as a [Colab notebook](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki/Deep-STORM). Users are **encouraged** to work with the notebook version of the software as it allows 3 significant advantages over this implementation:
+* In case you do not have a GPU-installed workstation and/or do not have a Matlab license, we have recently (June 2020) collaborated with the [Jacquemet](https://cellmig.org/) and the [Henriques labs](https://henriqueslab.github.io/) to incorporate Deep-STORM into the [ZeroCostDL4Mic](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2) platform as a [Colab notebook](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki/Deep-STORM). Users are **encouraged** to work with the notebook version of the software as it allows 3 significant advantages over this implementation:
     1. The user does not need to have access to a GPU-acccelerated workstation as the computation is performed freely on the cloud. 
     2. No prior installation is required, as the packages are installed automatically in the notebook. 
     3. Deep-STORM is extended to output *localizations* instead of directly outputting the super-resolved image. This feature is valuable for users intending to use the localizations afterwards for down stream analysis (e.g. single-particle-tracking).
+
 **Important Disclaimer**: When using the notebook implementation of Deep-STORM please also cite the [ZeroCostDL4Mic paper](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2).
 
 ![](Figures/DemoExpData.gif "")
