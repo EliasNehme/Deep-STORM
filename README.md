@@ -59,10 +59,10 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
 
 # Colab notebook
 
-* In case you do not have a GPU-installed workstation and/or do not have a Matlab license, we have recently (June 2020) collaborated with the [Jacquemet](https://cellmig.org/) and the [Henriques labs](https://henriqueslab.github.io/) to incorporate Deep-STORM into the [ZeroCostDL4Mic](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2) platform as a [Colab notebook](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki/Deep-STORM). Users are **encouraged** to work with the notebook version of the software as it allows 3 significant advantages over this implementation:
+* In case you do not have a GPU-installed workstation and/or do not have a Matlab license, we have recently (June 2020) collaborated with the [Jacquemet](https://cellmig.org/) and the [Henriques](https://henriqueslab.github.io/) labs to incorporate Deep-STORM into the [ZeroCostDL4Mic platform](https://github.com/HenriquesLab/ZeroCostDL4Mic) as a [Colab notebook](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki/Deep-STORM). Users are **encouraged** to work with the notebook version of the software as it allows 3 significant advantages over this implementation:
 
-    1. The user does not need to have access to a GPU-acccelerated workstation as the computation is performed freely on the cloud. 
-    2. No prior installation is required, as the packages are installed automatically in the notebook. 
+    1. The user does not need to have access to a GPU-acccelerated workstation as the computation is performed *freely* on Google cloud. 
+    2. No prior installation is required(!), as the packages are installed automatically in the notebook. 
     3. Deep-STORM is extended to output *localizations* instead of directly outputting the super-resolved image. This feature is valuable for users intending to use the localizations afterwards for down stream analysis (e.g. single-particle-tracking).
 
 ![](https://github.com/EliasNehme/Deep-STORM/blob/master/Figures/SuppFig%20-%20DS%20showcase_v4.png "Deep-STORM Colab implementation applied to actin-labelled Glia cells and DNA-PAINT tubulin immuno-labelling. Deep-STORM reconstrcutions are much faster and more correlated with the widefield image.")
