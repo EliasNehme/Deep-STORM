@@ -66,7 +66,7 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
     2. No prior installation of Matlab/Python is required as the needed functions and packages are installed automatically in the notebook. 
     3. Deep-STORM is extended to output *localizations* instead of directly outputting the super-resolved image. This feature is valuable for users intending to use the localizations afterwards for down stream analysis (e.g. single-particle-tracking).
 
-![](https://github.com/EliasNehme/Deep-STORM/blob/master/Figures/SuppFig%20-%20DS%20showcase_v4.png "Deep-STORM Colab implementation applied to actin-labelled Glia cells and DNA-PAINT tubulin immuno-labelling. Deep-STORM reconstrcutions are much faster and more correlated with the widefield image.")
+![](https://github.com/EliasNehme/Deep-STORM/blob/master/Figures/DS_notebook_demo.png "Deep-STORM Colab implementation applied to actin-labelled Glia cells. Deep-STORM reconstrcution is much faster and more correlated with the widefield image.")
 
 # Citation
 
