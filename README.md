@@ -27,7 +27,7 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
     1. ImageJ >= 1.51u with ThunderSTORM plugin >= 1.3 installed.
     2. Matlab >= R2017b with image-processing toolbox.
     3. Python >= 3.5 environment with Tensorflow >= 1.4.0, and Keras >= 1.0.0 installed.
-* **Important Update (06/2020)**: In case you do not have a workstation equipped with a GPU and/or want to skip the installation of the software needed for this code, you can use the [Colab notebook](#colab-notebook) implementation of Deep-STORM. This implementation is part of the [ZeroCostDL4Mic platform](https://github.com/HenriquesLab/ZeroCostDL4Mic) featuring a **self-explanatory easy-to-use graphical user interface**.
+* **Update (06/2020)**: In case you do not have a workstation equipped with a GPU and/or want to skip the installation of the software needed for this code, you can use the [Colab notebook](#colab-notebook) implementation of Deep-STORM. This implementation is part of the [ZeroCostDL4Mic platform](https://github.com/HenriquesLab/ZeroCostDL4Mic) featuring a **self-explanatory easy-to-use graphical user interface**. Users are **encouraged** to work with this implementation as it features additional advantages like outputting a *localizations* list.
 
 # Installation instructions
 
@@ -60,10 +60,10 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
 
 # Colab notebook
 
-* In case you do not have a GPU-installed workstation and/or do not have a Matlab license, we have recently (June 2020) collaborated with the [Jacquemet](https://cellmig.org/) and the [Henriques](https://henriqueslab.github.io/) labs to incorporate Deep-STORM into the [ZeroCostDL4Mic platform](https://github.com/HenriquesLab/ZeroCostDL4Mic) as a [Colab notebook](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki/Deep-STORM). Users are **encouraged** to work with the notebook version of the software as it allows 3 significant advantages over this implementation:
+* We have recently (June 2020) collaborated with the [Jacquemet](https://cellmig.org/) and the [Henriques](https://henriqueslab.github.io/) labs to incorporate Deep-STORM into the [ZeroCostDL4Mic platform](https://github.com/HenriquesLab/ZeroCostDL4Mic) as a [Colab notebook](https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki/Deep-STORM). Users are **encouraged** to work with the notebook version of the software as it allows 3 significant advantages over this implementation:
 
     1. The user does not need to have access to a GPU-acccelerated workstation as the computation is performed *freely* on Google cloud. 
-    2. No prior installation is required(!), as the packages are installed automatically in the notebook. 
+    2. No prior installation of Matlab/Python is required as the needed functions and packages are installed automatically in the notebook. 
     3. Deep-STORM is extended to output *localizations* instead of directly outputting the super-resolved image. This feature is valuable for users intending to use the localizations afterwards for down stream analysis (e.g. single-particle-tracking).
 
 ![](https://github.com/EliasNehme/Deep-STORM/blob/master/Figures/SuppFig%20-%20DS%20showcase_v4.png "Deep-STORM Colab implementation applied to actin-labelled Glia cells and DNA-PAINT tubulin immuno-labelling. Deep-STORM reconstrcutions are much faster and more correlated with the widefield image.")
@@ -83,16 +83,7 @@ If you use this code for your research, please cite our paper:
   publisher={Optical Society of America}
 }
 ```
-**Important Disclaimer**: When using the notebook implementation of Deep-STORM please also cite the [ZeroCostDL4Mic paper](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2):
-```
-@article{von2020zerocostdl4mic,
-  title={ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy},
-  author={Von Chamier, Lucas and Jukkala, Johanna and Spahn, Christoph and Lerche, Martina and Hern{\'a}ndez-P{\'e}rez, Sara and Mattila, Pieta and Karinou, Eleni and Holden, Seamus and Solak, Ahmet Can and Krull, Alexander and others},
-  journal={BioRxiv},
-  year={2020},
-  publisher={Cold Spring Harbor Laboratory}
-}
-```
+**Important Disclaimer**: When using the notebook implementation of Deep-STORM please also cite the [ZeroCostDL4Mic paper](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2).
 
 # License
  
