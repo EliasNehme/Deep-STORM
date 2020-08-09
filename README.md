@@ -82,7 +82,16 @@ If you use this code for your research, please cite our paper:
   publisher={Optical Society of America}
 }
 ```
-**Important Disclaimer**: When using the notebook implementation of Deep-STORM please also cite the [ZeroCostDL4Mic paper](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2).
+**Important Disclaimer**: When using the notebook implementation of Deep-STORM please also cite the [ZeroCostDL4Mic paper](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2):
+```
+@article{von2020zerocostdl4mic,
+  title={ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy},
+  author={Von Chamier, Lucas and Jukkala, Johanna and Spahn, Christoph and Lerche, Martina and Hern{\'a}ndez-P{\'e}rez, Sara and Mattila, Pieta and Karinou, Eleni and Holden, Seamus and Solak, Ahmet Can and Krull, Alexander and others},
+  journal={BioRxiv},
+  year={2020},
+  publisher={Cold Spring Harbor Laboratory}
+}
+```
 
 # License
  
