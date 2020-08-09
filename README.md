@@ -27,6 +27,7 @@ Deep-STORM is a single molecule localization microscopy code for training a cust
     1. ImageJ >= 1.51u with ThunderSTORM plugin >= 1.3 installed.
     2. Matlab >= R2017b with image-processing toolbox.
     3. Python >= 3.5 environment with Tensorflow >= 1.4.0, and Keras >= 1.0.0 installed.
+* **Important Update (06/2020)**: In case you do not have a workstation equipped with a GPU and/or want to skip the installation of the software needed for this code, you can use the [Colab notebook](#colab-notebook) implementation of Deep-STORM. This implementation is part of the [ZeroCostDL4Mic platform](https://github.com/HenriquesLab/ZeroCostDL4Mic) featuring a **self-explanatory easy-to-use graphical user interface**.
 
 # Installation instructions
 
