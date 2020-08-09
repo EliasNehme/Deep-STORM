@@ -3,7 +3,7 @@
 This code accompanies the paper: [Deep-STORM: Super resolution single molecule microscopy by deep learning](https://www.osapublishing.org/optica/fulltext.cfm?uri=optica-5-4-458&id=385495)
 
 
-* **Update (06/2020)**: In case you do not have a workstation equipped with a GPU and/or want to skip the installation of the software needed for this code, you can use the [Colab notebook](#colab-notebook) implementation of Deep-STORM. The notebook is part of the [ZeroCostDL4Mic platform](https://github.com/HenriquesLab/ZeroCostDL4Mic) featuring a **self-explanatory easy-to-use graphical user interface**. Besides being user-friendly, the notebook is **strongly recommended** as it features additional advantages like outputting a *localizations* list.
+* **Update (06/2020)**: In case you do not have a workstation equipped with a GPU and/or want to skip the installation of the software needed for this code, you can use the [Colab notebook](#colab-notebook) implementation of Deep-STORM. The notebook is part of the [ZeroCostDL4Mic platform](https://github.com/HenriquesLab/ZeroCostDL4Mic) featuring a **self-explanatory easy-to-use graphical user interface**. Besides being user-friendly, the notebook is strongly recommended as it features additional advantages like outputting a *localizations* list.
 
 # Contents
 
